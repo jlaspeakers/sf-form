@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+        }
+        .form-header {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .form-description {
+            text-align: left;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        .form-content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .form-left, .form-right {
+            width: 48%;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            margin-left: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .form-footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .submit-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-left: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            Contact a JLA Account Manager
+        </div>
+        <div class="form-description">
+            In the first instance, tell us the type of speaker, presenter or performer 
+you're looking for, an outline budget, the venue and event dates you're considering.
+        </div>
+        <form action="https://test.salesforce.com/servlet/servlet.WebToLead?
+encoding=UTF-8&orgId=00D1X0000000PBd" method="POST">
+            <input type="hidden" name="oid" value="00D1X0000000PBd">
+            <input type="hidden" name="retURL" value="http://www.jla.co.uk/">
+            <div class="form-content">
+                <div class="form-left">
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input id="first_name" maxlength="40" name="first_name" 
+size="20" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input id="last_name" maxlength="80" name="last_name" 
+size="20" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" maxlength="80" name="email" size="20" 
+type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input id="phone" maxlength="40" name="phone" size="20" 
+type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label>From time to time we send out emails announcing new 
+speakers and free tickets to our showcase events including Speakers Breakfasts and
+the JLA Real Variety Show. Please tick the box below if you would like to receive 
+these emails.</label>
+                        <input type="checkbox" name="subscribe"> Don't miss anything!
+                    </div>
+                </div>
+                <div class="form-right">
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input id="company" maxlength="40" name="company" size="20" 
+type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="00N1X00000ddf9y">Details</label>
+                        <textarea id="00N1X00000ddf9y" name="00N1X00000ddf9y" 
+rows="3" wrap="soft"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="not_robot"> I'm not a robot
+                    </div>
+                    <div class="form-group">
+                        We will never share the data you submit here with a third party. 
+Information is stored in a database in order to service your enquiry, but is deleted 
+once it is no longer required. You may request to have this data removed at any 
+time.
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <input type="submit" name="submit" class="submit-button" 
+value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
